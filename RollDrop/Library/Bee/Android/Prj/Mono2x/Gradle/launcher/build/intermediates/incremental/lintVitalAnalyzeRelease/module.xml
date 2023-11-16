@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="E:\Github\RollDrop\RollDrop\Library\Bee\Android\Prj\Mono2x\Gradle\launcher"
+    name=":launcher"
+    type="APP"
+    maven="Gradle:launcher:"
+    gradle="7.1.2"
+    buildFolder="build"
+    bootClassPath="C:\Users\Huseyin\AppData\Local\Android\Sdk\platforms\android-34\android.jar;C:\Users\Huseyin\AppData\Local\Android\Sdk\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="11"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

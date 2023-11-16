@@ -1,0 +1,21 @@
+<dependencies>
+  <compile
+      roots="E:\Github\RollDrop\RollDrop\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release">
+    <dependency
+        name="E:\Github\RollDrop\RollDrop\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release"
+        simpleName="Gradle:unityLibrary"/>
+  </compile>
+  <package
+      roots="E:\Github\RollDrop\RollDrop\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release,__local_aars__:E:\Github\RollDrop\RollDrop\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\libs\unity-classes.jar:unspecified@jar,:IngameDebugConsole:@aar,E:\Github\RollDrop\RollDrop\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary:mobilenotifications.androidlib::release">
+    <dependency
+        name="E:\Github\RollDrop\RollDrop\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary::release"
+        simpleName="Gradle:unityLibrary"/>
+    <dependency
+        name="__local_aars__:E:\Github\RollDrop\RollDrop\Library\Bee\Android\Prj\Mono2x\Gradle\unityLibrary\libs\unity-classes.jar:unspecified@jar"/>
+    <dependency
+        name=":IngameDebugConsole:@aar"/>
+    <dependency
+        name="E:\Github\RollDrop\RollDrop\Library\Bee\Android\Prj\Mono2x\Gradle@@:unityLibrary:mobilenotifications.androidlib::release"
+        simpleName="Gradle.unityLibrary:mobilenotifications.androidlib"/>
+  </package>
+</dependencies>
