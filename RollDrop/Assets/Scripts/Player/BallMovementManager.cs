@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class BallMovementManager : MonoBehaviour
@@ -13,6 +14,7 @@ public class BallMovementManager : MonoBehaviour
     private Rigidbody rb;
     private bool isGrounded = false;
     private Coroutine crushEffectCoroutine;
+    private Collider collideObject;
 
     void Start()
     {

@@ -98,61 +98,61 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16642}
+      Script: {instanceID: 16626}
     - Class: 114
-      Script: {instanceID: 16766}
+      Script: {instanceID: 16628}
+    - Class: 114
+      Script: {instanceID: 16674}
+    - Class: 114
+      Script: {instanceID: 16794}
+    - Class: 114
+      Script: {instanceID: 16906}
     - Class: 114
       Script: {instanceID: 17656}
     - Class: 114
-      Script: {instanceID: 17866}
+      Script: {instanceID: 17862}
     - Class: 114
-      Script: {instanceID: 17914}
+      Script: {instanceID: 17908}
     - Class: 114
-      Script: {instanceID: 18168}
+      Script: {instanceID: 18296}
     - Class: 114
-      Script: {instanceID: 18512}
+      Script: {instanceID: 18488}
     - Class: 114
-      Script: {instanceID: 19164}
+      Script: {instanceID: 18868}
     - Class: 114
-      Script: {instanceID: 20066}
+      Script: {instanceID: 18908}
     - Class: 114
-      Script: {instanceID: 20384}
+      Script: {instanceID: 18978}
     - Class: 114
-      Script: {instanceID: 20682}
+      Script: {instanceID: 19116}
     - Class: 114
-      Script: {instanceID: 21164}
+      Script: {instanceID: 19372}
     - Class: 114
-      Script: {instanceID: 21174}
+      Script: {instanceID: 19976}
     - Class: 114
-      Script: {instanceID: 21594}
+      Script: {instanceID: 19990}
     - Class: 114
-      Script: {instanceID: 21898}
+      Script: {instanceID: 20320}
     - Class: 114
-      Script: {instanceID: 22226}
+      Script: {instanceID: 20596}
     - Class: 114
-      Script: {instanceID: 27252}
+      Script: {instanceID: 21054}
     - Class: 114
-      Script: {instanceID: 27258}
+      Script: {instanceID: 21064}
     - Class: 114
-      Script: {instanceID: 32122}
+      Script: {instanceID: 21334}
     - Class: 114
-      Script: {instanceID: 39062}
+      Script: {instanceID: 21426}
     - Class: 114
-      Script: {instanceID: 39070}
+      Script: {instanceID: 21472}
     - Class: 114
-      Script: {instanceID: 39074}
+      Script: {instanceID: 21768}
     - Class: 114
-      Script: {instanceID: 39082}
+      Script: {instanceID: 22090}
     - Class: 114
-      Script: {instanceID: 39098}
+      Script: {instanceID: 22094}
     - Class: 114
-      Script: {instanceID: 39106}
-    - Class: 114
-      Script: {instanceID: 39118}
-    - Class: 114
-      Script: {instanceID: 79282}
-    - Class: 114
-      Script: {instanceID: 89256}
+      Script: {instanceID: 22690}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -174,6 +174,18 @@ ScriptsOnlyBuild:
     - Class: 225
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 0b7995e6c59201aa9b4ad6a0aecb4621
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 1ed846c1ed9d69c8c2fcff9a6896b04f
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Text
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -240,6 +252,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.AdaptivePerformance
     namespaceName: UnityEngine.AdaptivePerformance
     className: AdaptiveShadowmapResolution
+  - hash:
+      serializedVersion: 2
+      Hash: c1a865dc4890d765173984096feccaff
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraController
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -410,12 +428,6 @@ ScriptsOnlyBuild:
     className: AdaptiveFramerate
   - hash:
       serializedVersion: 2
-      Hash: 0b7995e6c59201aa9b4ad6a0aecb4621
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Button
-  - hash:
-      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -444,6 +456,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTransformParentChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: a9f457614237af6282a553440b38ecf1
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugsOnScrollListener
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -530,6 +548,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: c1cacaf6bd3cc4e9978008c16f4f80f1
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugLogItem
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.AdaptivePerformance
     namespaceName: UnityEngine.AdaptivePerformance
@@ -540,6 +564,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 04461f4c872374c6ed3215d14cd8560a
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugLogPopup
+  - hash:
+      serializedVersion: 2
+      Hash: 73a0ff9487f268e90661f910b774419a
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugLogResizeListener
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -588,6 +624,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: DictionaryAsset
+  - hash:
+      serializedVersion: 2
+      Hash: ecfa5b7fc8502fe3ad0d64e2ff515ee6
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugLogRecycledListView
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -674,6 +716,12 @@ ScriptsOnlyBuild:
     className: GlobalMessageListener
   - hash:
       serializedVersion: 2
+      Hash: da835ece38c4d24a231054f850c469d8
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: EventSystemHandler
+  - hash:
+      serializedVersion: 2
       Hash: 892b5093967522535ba980d28ce42084
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -740,10 +788,10 @@ ScriptsOnlyBuild:
     className: UnityOnDeselectMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 1ed846c1ed9d69c8c2fcff9a6896b04f
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Text
+      Hash: bb5f0dcdf3ffe79a76eeb2d98ca565a8
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameManager
   - hash:
       serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
@@ -812,6 +860,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: d9f7f7a6c29ab648da99538358e1a811
+    assemblyName: IngameDebugConsole.Runtime
+    namespaceName: IngameDebugConsole
+    className: DebugLogManager
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -822,6 +876,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 40639629fd4b21eb5ae29dcdc9115d14
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BallMovementManager
   - hash:
       serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
@@ -944,6 +1004,12 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: 751e5bae2a317288c2ab58d66687092b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlatformDestroyer
+  - hash:
+      serializedVersion: 2
       Hash: 1acffdc47de1ca014dae3d384c3d1086
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -1010,6 +1076,12 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: 7b3c64c81450141ac9e92e4ac226a3ed
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlatformController
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1038,78 +1110,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 7b3c64c81450141ac9e92e4ac226a3ed
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlatformController
-  - hash:
-      serializedVersion: 2
-      Hash: 40639629fd4b21eb5ae29dcdc9115d14
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: BallMovementManager
-  - hash:
-      serializedVersion: 2
-      Hash: bb5f0dcdf3ffe79a76eeb2d98ca565a8
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: c1cacaf6bd3cc4e9978008c16f4f80f1
-    assemblyName: IngameDebugConsole.Runtime
-    namespaceName: IngameDebugConsole
-    className: DebugLogItem
-  - hash:
-      serializedVersion: 2
-      Hash: da835ece38c4d24a231054f850c469d8
-    assemblyName: IngameDebugConsole.Runtime
-    namespaceName: IngameDebugConsole
-    className: EventSystemHandler
-  - hash:
-      serializedVersion: 2
-      Hash: 04461f4c872374c6ed3215d14cd8560a
-    assemblyName: IngameDebugConsole.Runtime
-    namespaceName: IngameDebugConsole
-    className: DebugLogPopup
-  - hash:
-      serializedVersion: 2
-      Hash: 73a0ff9487f268e90661f910b774419a
-    assemblyName: IngameDebugConsole.Runtime
-    namespaceName: IngameDebugConsole
-    className: DebugLogResizeListener
-  - hash:
-      serializedVersion: 2
-      Hash: d9f7f7a6c29ab648da99538358e1a811
-    assemblyName: IngameDebugConsole.Runtime
-    namespaceName: IngameDebugConsole
-    className: DebugLogManager
-  - hash:
-      serializedVersion: 2
-      Hash: a9f457614237af6282a553440b38ecf1
-    assemblyName: IngameDebugConsole.Runtime
-    namespaceName: IngameDebugConsole
-    className: DebugsOnScrollListener
-  - hash:
-      serializedVersion: 2
-      Hash: ecfa5b7fc8502fe3ad0d64e2ff515ee6
-    assemblyName: IngameDebugConsole.Runtime
-    namespaceName: IngameDebugConsole
-    className: DebugLogRecycledListView
-  - hash:
-      serializedVersion: 2
-      Hash: 751e5bae2a317288c2ab58d66687092b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PlatformDestroyer
-  - hash:
-      serializedVersion: 2
-      Hash: c1a865dc4890d765173984096feccaff
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraController
   platform: 13
   scenePathNames:
   - Assets/Scenes/TestScene.unity
