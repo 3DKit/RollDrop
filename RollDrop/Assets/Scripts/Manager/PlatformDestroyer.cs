@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlatformDestroyer : MonoBehaviour
 {
-    GameObject player; // Player objesinin referansı
-    Transform explosionDirection; // Fırlatma yönlendirmesi için referans transform
-    float explosionForce = 13.0f; // Fırlatma kuvveti
+    public GameObject player;
+    public PlatformController platformController;
+    Transform explosionDirection;
+    float explosionForce = 13.0f;
     Vector3 offset;
     bool destroyed = false;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         offset.x = Random.Range(-1f, 1f);
         offset.y = 1;
         offset.z = Random.Range(-1f, 1f);
@@ -20,6 +20,10 @@ public class PlatformDestroyer : MonoBehaviour
 
     void Update()
     {
+        if (player == null)
+        {
+            return;
+        }
         // Eğer platformun yüksekliği topun yüksekliğinden büyükse
         if (transform.position.y > player.transform.position.y && !destroyed)
         {
@@ -31,7 +35,8 @@ public class PlatformDestroyer : MonoBehaviour
     void ExplodePlatform()
     {
         this.transform.SetParent(null);
-        Destroy(this.gameObject,5f);
+        Destroy(this.gameObject, 5f);
+        platformController.AddProgress();
         // Tüm alt objeleri döngü ile kontrol et
         foreach (Transform child in transform)
         {
