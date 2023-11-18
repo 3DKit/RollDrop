@@ -55,7 +55,11 @@ public class BallMovementManager : MonoBehaviour
         {
             Debug.DrawRay(sphereCastOrigin, Vector3.down * hit.distance, Color.green); // Işının isabet ettiği yeri yeşil renkte çiz
             Debug.DrawRay(invertsphereCastOrigin, Vector3.down * hit.distance, Color.green); // Işının isabet ettiği yeri yeşil renkte çiz
-            if (hit.collider.tag == "Ground")
+            if (hit.collider.tag == "Enemy")
+            {
+                isGrounded = false;
+                Destroy(this.gameObject);
+            }else if (hit.collider.tag == "Ground")
             {
                 isGrounded = true;
             }else if(hit.collider.gameObject.tag == "Win"){
@@ -82,13 +86,20 @@ public class BallMovementManager : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(this.gameObject);
+        }else if (collision.gameObject.CompareTag("Ground"))
         {
             if (crushEffectCoroutine != null)
             {
                 StopCoroutine(crushEffectCoroutine);
             }
             crushEffectCoroutine = StartCoroutine(CrushEffect());
+        }
+        else if (collision.gameObject.CompareTag("Win"))
+        {
+            GameManager.Instance().Win(); // Örneğin, YourFunction, GameManager'da tanımlı bir fonksiyon
         }
     }
 }

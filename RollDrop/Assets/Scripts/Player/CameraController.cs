@@ -22,7 +22,9 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        // Eğer topun yüksekliği kameradan daha aşağıdaysa
+        if (player == null)
+            return;
+
         if (player.position.y + yOffset < transform.position.y)
         {
             // Kameranın yüksekliğini topun yüksekliğine eşitle, ofset ekleyerek

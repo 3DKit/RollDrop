@@ -5,7 +5,6 @@ public class PlatformController : MonoBehaviour
     private Vector2 touchStartPos;
     public float rotationSpeed = 0.5f;
     private bool isMobilePlatform;
-    GameManager gameManager;
     GameObject player;
     int platformCount, currentPlatform;
     public bool started;
@@ -13,8 +12,7 @@ public class PlatformController : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        player = gameManager.player;
+        player = GameManager.Instance().Player();
         // Uygulama mobil platformdaysa dokunmatik kontrolü etkinleştir
         isMobilePlatform = Application.isMobilePlatform;
         AttachScriptToChildrenObjects();
@@ -82,7 +80,7 @@ public class PlatformController : MonoBehaviour
         float progress;
         currentPlatform++;
         progress = (float)currentPlatform / platformCount;
-        gameManager.CheckProgress(progress);
+        GameManager.Instance().CheckProgress(progress);
     }
 
     public void StartGame()

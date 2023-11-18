@@ -5,32 +5,64 @@ using UnityEngine.UI; // Unity UI Text için gerekli namespace
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject player; // Player objesinin referansı
-    public int targetFPS = 60;
-    Image progressBar;
-    Text currentLevelText, nextLevelText;
+    private static GameManager _instance;
+
+    [SerializeField]
+    private GameObject _playerPrefab;
+
+    [SerializeField]
+    private int _targetFPS = 60;
+
+    [SerializeField]
+    private Image _progressBar;
+
+    [SerializeField]
+    private Text _currentLevelText, _nextLevelText;
+
+    private GameObject _player;
+
+    public static GameManager Instance()
+    {
+        return GameManager._instance;
+    }
+
+    public GameObject Player()
+    {
+        return this._player;
+    }
 
     void Awake()
     {
-        Debug.Log(SceneManager.GetActiveScene().buildIndex);
-        Debug.Log(SceneManager.GetActiveScene().name);
+        if (_instance == null)
+        {
+            _instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
             Application.LoadLevel(1);
         }
+
         // Oyun başladığında hedef FPS'yi ayarla
         QualitySettings.vSyncCount = 0;  // Vertical sync'i kapat
-        Application.targetFrameRate = targetFPS;
-        player = GameObject.FindGameObjectWithTag("Player");
-        progressBar = GameObject.Find("ProgressBar").GetComponent<Image>();
-        currentLevelText = GameObject.Find("CurrentLevelText").GetComponent<Text>();
-        nextLevelText = GameObject.Find("NextLevelText").GetComponent<Text>();
-        currentLevelText.text = SceneManager.GetActiveScene().buildIndex.ToString();
-        nextLevelText.text = (SceneManager.GetActiveScene().buildIndex + 1).ToString();
+        Application.targetFrameRate = _targetFPS;
+
+        _currentLevelText.text = SceneManager.GetActiveScene().buildIndex.ToString();
+        _nextLevelText.text = (SceneManager.GetActiveScene().buildIndex + 1).ToString();
     }
 
     public void CheckProgress(float progress)
     {
-        progressBar.fillAmount = progress;
+        _progressBar.fillAmount = progress;
+    }
+
+    public void Win()
+    {
+        PlayerPrefs.SetInt("Level", SceneManager.GetActiveScene().buildIndex+1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
