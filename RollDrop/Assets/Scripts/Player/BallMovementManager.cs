@@ -23,11 +23,12 @@ public class BallMovementManager : MonoBehaviour
 
     void Update()
     {
-        isGrounded = SphereCastGroundCheck();
+        SphereCastGroundCheck();
 
         if (isGrounded)
         {
             Jump();
+            isGrounded = false;
         }
 
         if (rb.velocity.y < 0)
@@ -45,7 +46,7 @@ public class BallMovementManager : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y));
     }
 
-    bool SphereCastGroundCheck()
+    void SphereCastGroundCheck()
     {
         RaycastHit hit;
         Vector3 sphereCastOrigin = transform.position + new Vector3(sphereCastRadius, 0f, 0f);
@@ -54,13 +55,12 @@ public class BallMovementManager : MonoBehaviour
         {
             Debug.DrawRay(sphereCastOrigin, Vector3.down * hit.distance, Color.green); // Işının isabet ettiği yeri yeşil renkte çiz
             Debug.DrawRay(invertsphereCastOrigin, Vector3.down * hit.distance, Color.green); // Işının isabet ettiği yeri yeşil renkte çiz
-            return true;
-        }
-        else
-        {
-            Debug.DrawRay(sphereCastOrigin, Vector3.down * 0.3f, Color.red); // Işının çarpmadığı yeri kırmızı renkte çiz
-            Debug.DrawRay(invertsphereCastOrigin, Vector3.down * 0.3f, Color.red); // Işının çarpmadığı yeri kırmızı renkte çiz
-            return false;
+            if (hit.collider.tag == "Ground")
+            {
+                isGrounded = true;
+            }else if(hit.collider.gameObject.tag == "Win"){
+                isGrounded = false;
+            }
         }
     }
 

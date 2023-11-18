@@ -8,6 +8,7 @@ public class PlatformController : MonoBehaviour
     GameManager gameManager;
     GameObject player;
     int platformCount, currentPlatform;
+    public bool started;
 
 
     void Start()
@@ -23,11 +24,12 @@ public class PlatformController : MonoBehaviour
 
     void Update()
     {
+        if (!started)
+            return;
         // Dokunmatik kontrolü (mobil)
         if (isMobilePlatform && Input.touchCount == 1)
         {
             Touch touch = Input.GetTouch(0);
-
             switch (touch.phase)
             {
                 case TouchPhase.Began:
@@ -81,5 +83,10 @@ public class PlatformController : MonoBehaviour
         currentPlatform++;
         progress = (float)currentPlatform / platformCount;
         gameManager.CheckProgress(progress);
+    }
+
+    public void StartGame()
+    {
+        started = true;
     }
 }
