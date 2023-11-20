@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private static GameManager _instance;
 
     [SerializeField] private GameObject _playerPrefab;  // Reference to the pre-defined prefab of the player object
+    [SerializeField] private GameObject _decal;
     [SerializeField] private Image _progressBar;  // UI element to display the progress bar
     [SerializeField] private Text _currentLevelText, _nextLevelText;  // Texts indicating the current and next levels
     [SerializeField] private GameObject[] _levelPrefabs;  // Level prefabs array
@@ -65,12 +66,19 @@ public class GameManager : MonoBehaviour
     {
         // Reset the progress bar to zero at the start
         CheckProgress(0);
+        Application.targetFrameRate = 120;
     }
 
     public void CheckProgress(float progress)
     {
         // Update the progress bar
         _progressBar.fillAmount = progress;
+    }
+
+    public void Splasher(Transform origin)
+    {
+        GameObject splash = Instantiate(_decal, new Vector3(origin.position.x,origin.position.y-0.22f,origin.position.z), Quaternion.Euler(90f, Random.Range(-360,360), 0f));
+        splash.transform.parent = _platformController.transform;
     }
 
     public void Win()
@@ -82,7 +90,6 @@ public class GameManager : MonoBehaviour
         // Call the RestartLevel function after 0.5 seconds
         Invoke("RestartLevel", 0.5f);
     }
-
     public void StartGame()
     {
         // Call the StartGame function in PlatformController

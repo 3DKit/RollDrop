@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -16,16 +17,16 @@ public class BallMovementManager : MonoBehaviour
     private bool isGrounded = false;
     private Coroutine crushEffectCoroutine;
     private Collider collideObject;
+    private AudioSource _audioSource;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
     {
-        SphereCastGroundCheck();
-
         if (isGrounded)
         {
             Jump();
@@ -47,28 +48,6 @@ public class BallMovementManager : MonoBehaviour
         rb.velocity = new Vector3(rb.velocity.x, Mathf.Sqrt(jumpHeight * -2f * Physics.gravity.y));
     }
 
-    void SphereCastGroundCheck()
-    {
-        RaycastHit hit;
-        Vector3 sphereCastOrigin = transform.position + new Vector3(sphereCastRadius, 0f, 0f);
-        Vector3 invertsphereCastOrigin = transform.position - new Vector3(sphereCastRadius, 0f, 0f);
-        if (Physics.SphereCast(sphereCastOrigin, 0f, Vector3.down, out hit, 0.31f) || Physics.SphereCast(invertsphereCastOrigin, 0f, Vector3.down, out hit, 0.31f))
-        {
-            Debug.DrawRay(sphereCastOrigin, Vector3.down * hit.distance, Color.green); // Işının isabet ettiği yeri yeşil renkte çiz
-            Debug.DrawRay(invertsphereCastOrigin, Vector3.down * hit.distance, Color.green); // Işının isabet ettiği yeri yeşil renkte çiz
-            if (hit.collider.tag == "Enemy")
-            {
-                isGrounded = false;
-                Destroy(this.gameObject);
-            }else if (hit.collider.tag == "Ground")
-            {
-                isGrounded = true;
-            }else if(hit.collider.gameObject.tag == "Win"){
-                isGrounded = false;
-            }
-        }
-    }
-
     IEnumerator CrushEffect()
     {
         Vector3 originalScale = new Vector3(1, 1, 1);
@@ -87,22 +66,25 @@ public class BallMovementManager : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.collider.tag == "Enemy")
         {
-            // Reload the current scene
             int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
             SceneManager.LoadScene(currentSceneIndex);
         }
-        else if (collision.gameObject.CompareTag("Ground"))
+        else if (collision.collider.tag == "Ground")
         {
+            _audioSource.Play();
+            isGrounded = true;
             if (crushEffectCoroutine != null)
             {
                 StopCoroutine(crushEffectCoroutine);
             }
             crushEffectCoroutine = StartCoroutine(CrushEffect());
+            GameManager.Instance.Splasher(this.transform);
         }
-        else if (collision.gameObject.CompareTag("Win"))
+        else if (collision.collider.gameObject.tag == "Win")
         {
+            isGrounded = false;
             GameManager.Instance.Win(); // Örneğin, YourFunction, GameManager'da tanımlı bir fonksiyon
         }
     }
