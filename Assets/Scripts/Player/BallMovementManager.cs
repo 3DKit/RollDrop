@@ -19,19 +19,33 @@ public class BallMovementManager : MonoBehaviour
     private Collider collideObject;
     private AudioSource _audioSource;
     [SerializeField] private GameObject _deadParticle;
+    private float _falltime = 0f;
+    [SerializeField]
+    private float _fallThreshold = 2f;
+    private Color _originalColor;
+    private MeshRenderer _renderer => GetComponent<MeshRenderer>();
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         _audioSource = GetComponent<AudioSource>();
+        _originalColor = _renderer.material.color;
     }
 
     void Update()
     {
+        _falltime += Time.deltaTime;
+        if (_falltime > _fallThreshold)
+        {
+            // Önceki rengi geri yükle
+            _renderer.material.color = Color.red;
+        }
         if (isGrounded)
         {
             Jump();
             isGrounded = false;
+            _falltime = 0f;
+            _renderer.material.color = _originalColor;
         }
 
         if (rb.velocity.y < 0)
@@ -67,32 +81,44 @@ public class BallMovementManager : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        
         if (collision.collider.tag == "Enemy")
         {
-            Instantiate(_deadParticle, transform.position, Quaternion.identity);
-            Invoke("ResetLevel",1f);
-            GetComponent<MeshRenderer>().enabled = false;
+            if (_falltime > _fallThreshold)
+            {
+                collision.gameObject.transform.parent.gameObject.GetComponent<PlatformDestroyer>().ExplodePlatform();
+            }
+            else
+            {
+                Instantiate(_deadParticle, transform.position, Quaternion.identity);
+                GameManager.Instance.Dead();
+                GetComponent<MeshRenderer>().enabled = false;
+                GetComponent<Rigidbody>().useGravity = false;
+            }
         }
         else if (collision.collider.tag == "Ground")
         {
             _audioSource.Play();
+            if (_falltime > _fallThreshold)
+            {
+                collision.gameObject.transform.parent.gameObject.GetComponent<PlatformDestroyer>().ExplodePlatform();
+            }
+            else
+            {
+                GameManager.Instance.Splasher(this.transform);
+            }
             isGrounded = true;
             if (crushEffectCoroutine != null)
             {
                 StopCoroutine(crushEffectCoroutine);
             }
             crushEffectCoroutine = StartCoroutine(CrushEffect());
-            GameManager.Instance.Splasher(this.transform);
         }
         else if (collision.collider.gameObject.tag == "Win")
         {
+            _falltime = -10;
             isGrounded = false;
             GameManager.Instance.Win(); // Örneğin, YourFunction, GameManager'da tanımlı bir fonksiyon
         }
-    }
-    public void ResetLevel()
-    {
-        Scene currentScene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(currentScene.name);
     }
 }

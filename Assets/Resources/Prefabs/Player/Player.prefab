@@ -284,6 +284,7 @@ MonoBehaviour:
   sphereCastRadius: 0.24
   _deadParticle: {fileID: 4452511512460841709, guid: 9817487aadf0e9c4b82fbac6f2d01cc6,
     type: 3}
+  _fallThreshold: 1.45
 --- !u!65 &1892215780707398781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -303,7 +304,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.46, y: 0.46, z: 0.46}
+  m_Size: {x: 0.45, y: 0.45, z: 0.45}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3752621534631980642
 Rigidbody:
@@ -345,7 +346,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 6a773b1d50da3b34389d322c8bd7c2cd, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.75
-  m_Pitch: 1.2
+  m_Pitch: 1.5
   Loop: 0
   Mute: 0
   Spatialize: 0

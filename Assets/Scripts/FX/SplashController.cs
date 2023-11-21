@@ -6,10 +6,12 @@ public class SplashController : MonoBehaviour
 {
     [SerializeField]
     private float fadeDuration = 3f; // Silinme süresi
+    [SerializeField]
+    private float fadeStart = 1f; // Silinme süresi
 
     void Start()
     {
-        Invoke("FadeOutAndDestroy", 2.0f); // 2 saniye sonra FadeOutAndDestroy fonksiyonunu çaðýr
+        Invoke("FadeOutAndDestroy", fadeStart); // 2 saniye sonra FadeOutAndDestroy fonksiyonunu çaðýr
     }
 
     void FadeOutAndDestroy()

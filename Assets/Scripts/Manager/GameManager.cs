@@ -12,15 +12,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image _progressBar;  // UI element to display the progress bar
     [SerializeField] private Text _currentLevelText, _nextLevelText;  // Texts indicating the current and next levels
     [SerializeField] private GameObject[] _levelPrefabs;  // Level prefabs array
+    [SerializeField] private AudioClip _winSound;
+    [SerializeField] private AudioClip _deadSound;
+    [SerializeField] private AudioClip _crashSound;
 
+    private AudioSource _audioSource => GetComponent<AudioSource>();
     private GameObject _player;  // Reference to the player object
     private PlatformController _platformController;  // PlatformController component
     private int _currentLevel;  // Index of the current level
-
     public static GameManager Instance => _instance;  // Global access point for GameManager
-
     public GameObject Player => _player;  // Global access point for the player object
-
     private void RestartLevel()
     {
         // Reload the current scene
@@ -64,14 +65,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        // Reset the progress bar to zero at the start
         CheckProgress(0);
         Application.targetFrameRate = 120;
     }
 
     public void CheckProgress(float progress)
     {
-        // Update the progress bar
         _progressBar.fillAmount = progress;
     }
 
@@ -83,20 +82,34 @@ public class GameManager : MonoBehaviour
 
     public void Win()
     {
-        // Win condition
         PlayerPrefs.SetInt("Level", _currentLevel + 1);
         Log("Level completed. Moving to the next level.");
+        _audioSource.clip = _winSound;
+        _audioSource.Play();
+        Invoke("RestartLevel", 1f);
+    }
+    public void Dead()
+    {
+        _audioSource.clip = _deadSound;
+        _audioSource.Play();
+        Invoke("RestartLevel",1f);
+    }
 
-        // Call the RestartLevel function after 0.5 seconds
-        Invoke("RestartLevel", 0.5f);
+    public void CrashSound()
+    {
+        _audioSource.clip = _crashSound;
+        _audioSource.Play();
+    }
+    public void ResetLevel()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
     public void StartGame()
     {
-        // Call the StartGame function in PlatformController
         _platformController.StartGame();
     }
 
-    // Centralized method for Debug.Log usage
     public void Log(string message)
     {
 #if UNITY_EDITOR

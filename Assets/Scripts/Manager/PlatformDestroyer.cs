@@ -32,8 +32,9 @@ public class PlatformDestroyer : MonoBehaviour
         }
     }
 
-    void ExplodePlatform()
+    public void ExplodePlatform()
     {
+        GameManager.Instance.CrashSound();
         this.transform.SetParent(null);
         Destroy(this.gameObject, 5f);
         platformController.AddProgress();
