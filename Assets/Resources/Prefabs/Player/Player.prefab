@@ -282,6 +282,8 @@ MonoBehaviour:
   crushScale: 0.5
   transitionDuration: 1
   sphereCastRadius: 0.24
+  _deadParticle: {fileID: 4452511512460841709, guid: 9817487aadf0e9c4b82fbac6f2d01cc6,
+    type: 3}
 --- !u!65 &1892215780707398781
 BoxCollider:
   m_ObjectHideFlags: 0

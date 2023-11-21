@@ -18,6 +18,7 @@ public class BallMovementManager : MonoBehaviour
     private Coroutine crushEffectCoroutine;
     private Collider collideObject;
     private AudioSource _audioSource;
+    [SerializeField] private GameObject _deadParticle;
 
     void Start()
     {
@@ -68,8 +69,9 @@ public class BallMovementManager : MonoBehaviour
     {
         if (collision.collider.tag == "Enemy")
         {
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex);
+            Instantiate(_deadParticle, transform.position, Quaternion.identity);
+            Invoke("ResetLevel",1f);
+            GetComponent<MeshRenderer>().enabled = false;
         }
         else if (collision.collider.tag == "Ground")
         {
@@ -87,5 +89,10 @@ public class BallMovementManager : MonoBehaviour
             isGrounded = false;
             GameManager.Instance.Win(); // Örneğin, YourFunction, GameManager'da tanımlı bir fonksiyon
         }
+    }
+    public void ResetLevel()
+    {
+        Scene currentScene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(currentScene.name);
     }
 }
