@@ -17,7 +17,7 @@ Bu Unity Android oyunu, [Proje Adı] adını taşıyor ve [kısa bir açıklama 
 
 Oyunun oynanışını daha iyi anlamak için aşağıdaki videoya veya gif'e göz atabilirsiniz.
 
-![Oynanış Görüntüsü](![image]https://github.com/3DKit/RollDrop/assets/101405775/c1c220c2-c557-499d-83b1-262c951b9537)
+![Oynanış Görüntüsü]![image]https://github.com/3DKit/RollDrop/assets/101405775/c1c220c2-c557-499d-83b1-262c951b9537
 [Video Görüntüsü İçin Youtube Bağlantısı](https://youtu.be/1YDDjY2rAMI)
 
 Versiyon Notları
