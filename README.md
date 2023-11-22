@@ -13,7 +13,7 @@ Mobile hyper casual game based on fast and fun mechanics, designed with Unity an
 
 ## GAmeplay
 
-![image](https://github.com/3DKit/RollDrop/assets/101405775/c1c220c2-c557-499d-83b1-262c951b9537)
+![Gif](https://github.com/3DKit/RollDrop/assets/101405775/1a63db06-51cc-4319-9c11-728d6e588e40))
 
 [Video Görüntüsü İçin Youtube Bağlantısı](https://youtu.be/1YDDjY2rAMI)
 
