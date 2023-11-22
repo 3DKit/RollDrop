@@ -1,4 +1,4 @@
-# Roll Drop
+# Roll Drop 0.6.0
 
 ### Unity Mobile Hyper Casual Game Project
 
