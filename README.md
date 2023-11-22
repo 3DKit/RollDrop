@@ -16,7 +16,8 @@ Mobile hyper casual game based on fast and fun mechanics, designed with Unity an
 ![ezgif com-optimize](https://github.com/3DKit/RollDrop/assets/101405775/4c9b2c9d-b162-496e-97e0-4d437d63ad25)
 
 ## Version Notes
-### v0.5.0
+
+### v0.6.0
 New sounds
 
 Performance optimisation
@@ -25,9 +26,16 @@ New Mechanics
 
 Graphics Update
 
-### v0.4.0
+### v0.5.0
 Audio drivers added
 
+Performance optimisation
+
+New Mechanics
+
+Graphics Update
+
+### v0.4.0
 Performance optimisation
 
 New Mechanics
