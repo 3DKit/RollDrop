@@ -20,18 +20,21 @@ Mobile hyper casual game based on fast and fun mechanics, designed with Unity an
 ### v0.6.0
 New sounds
 
-Performance optimisation
-
 New Mechanics
+
+New Levels
 
 Graphics Update
 
-### v0.5.0
-Audio drivers added
-
 Performance optimisation
 
+### v0.5.0
+
 New Mechanics
+
+New Audio Support
+
+Performance optimisation
 
 Graphics Update
 
