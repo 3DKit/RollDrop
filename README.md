@@ -27,7 +27,7 @@ Performance optimisation
 New Mechanics
 Graphics Update
 
-v0.4.0
+### v0.4.0
 Audio drivers added
 Performance optimisation
 New Mechanics
