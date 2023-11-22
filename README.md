@@ -1,16 +1,16 @@
-# Proje Adı
+# Roll Drop
 
-Kısa bir proje açıklaması buraya gelebilir.
+Unity mobile hyper casual game project...
 
 ## Giriş
 
-Bu Unity Android oyunu, [Proje Adı] adını taşıyor ve [kısa bir açıklama ekleyin]. Proje, [geliştirme amacı ve hedefleri hakkında bilgi ekleyin].
+Mobile hyper casual game based on fast and fun mechanics, designed with Unity and URP.
 
 ## Temel Özellikler
 
-- [Özellik 1]
-- [Özellik 2]
-- [Özellik 3]
+- AdMob Integration
+- Sound Effects Included
+- Touch Screen Support
 
 ## Oynanış Görüntüleri
 
