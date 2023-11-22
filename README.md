@@ -19,7 +19,7 @@ Oyunun oynanışını daha iyi anlamak için aşağıdaki videoya veya gif'e gö
 
 ![Oynanış Görüntüsü](https://tenor.com/tr/view/android-gif-18350611)
 
-[Video Görüntüsü İçin Youtube Bağlantısı](https://www.youtube.com/watch?v=1YDDjY2rAMI)
+[Video Görüntüsü İçin Youtube Bağlantısı](https://youtu.be/1YDDjY2rAMI)
 
 Versiyon Notları
 v0.5.0
