@@ -1,2 +1,39 @@
-# RollDrop
-Open Source Unity Mobile Game Development
+# Proje Adı
+
+Kısa bir proje açıklaması buraya gelebilir.
+
+## Giriş
+
+Bu Unity Android oyunu, [Proje Adı] adını taşıyor ve [kısa bir açıklama ekleyin]. Proje, [geliştirme amacı ve hedefleri hakkında bilgi ekleyin].
+
+## Temel Özellikler
+
+- [Özellik 1]
+- [Özellik 2]
+- [Özellik 3]
+- ...
+
+## Oynanış Görüntüleri
+
+Oyunun oynanışını daha iyi anlamak için aşağıdaki videoya veya gif'e göz atabilirsiniz.
+
+![Oynanış Görüntüsü](https://tenor.com/tr/view/android-gif-18350611)
+
+[Video Görüntüsü İçin Youtube Bağlantısı](https://www.youtube.com/watch?v=1YDDjY2rAMI)
+
+Versiyon Notları
+v0.5.0
+New sounds
+Performance optimisation
+New Mechanics
+Graphics Update
+
+v0.4.0
+Audio drivers added
+Performance optimisation
+New Mechanics
+...
+
+Katkıda Bulunanlar
+
+© 2023 Roll Drop
