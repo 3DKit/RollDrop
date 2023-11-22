@@ -31,8 +31,3 @@ Graphics Update
 Audio drivers added
 Performance optimisation
 New Mechanics
-...
-
-Katkıda Bulunanlar
-
-© 2023 Roll Drop
