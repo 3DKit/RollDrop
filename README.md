@@ -1,8 +1,6 @@
 # Roll Drop
 
-Unity mobile hyper casual game project...
-
-## Giriş
+### Unity mobile hyper casual game project...
 
 Mobile hyper casual game based on fast and fun mechanics, designed with Unity and URP.
 
@@ -11,10 +9,9 @@ Mobile hyper casual game based on fast and fun mechanics, designed with Unity an
 - AdMob Integration
 - Sound Effects Included
 - Touch Screen Support
+- Easy Level Design Workflow
 
 ## Oynanış Görüntüleri
-
-Oyunun oynanışını daha iyi anlamak için aşağıdaki videoya veya gif'e göz atabilirsiniz.
 
 ![image](https://github.com/3DKit/RollDrop/assets/101405775/c1c220c2-c557-499d-83b1-262c951b9537)
 
