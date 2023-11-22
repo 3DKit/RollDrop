@@ -21,7 +21,7 @@ Oyunun oynanışını daha iyi anlamak için aşağıdaki videoya veya gif'e gö
 [Video Görüntüsü İçin Youtube Bağlantısı](https://youtu.be/1YDDjY2rAMI)
 
 ## Versiyon Notları
-## v0.5.0
+### v0.5.0
 New sounds
 Performance optimisation
 New Mechanics
