@@ -4,7 +4,7 @@
 
 Mobile hyper casual game based on fast and fun mechanics, designed with Unity and URP.
 
-<a href='https://play.google.com/store/apps/details?id=com.threedkit.RollDrop'><img alt='Get it on Google Play' height='70' src='https://www.fcsok.org/wp-content/uploads/2020/04/get-it-on-google-play-badge.png'/></a>
+<a href='https://play.google.com/store/apps/details?id=com.threedkit.RollDrop'><img alt='Get it on Google Play' height='50' src='https://www.fcsok.org/wp-content/uploads/2020/04/get-it-on-google-play-badge.png'/></a>
 ## Key Features
 
 - AdMob Integration
