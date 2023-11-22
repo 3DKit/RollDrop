@@ -23,11 +23,16 @@ Oyunun oynanışını daha iyi anlamak için aşağıdaki videoya veya gif'e gö
 ## Versiyon Notları
 ### v0.5.0
 New sounds
+
 Performance optimisation
+
 New Mechanics
+
 Graphics Update
 
 ### v0.4.0
 Audio drivers added
+
 Performance optimisation
+
 New Mechanics
