@@ -1,9 +1,10 @@
-# Roll Drop 0.6.0 <a href='https://play.google.com/store/apps/details?id=com.none.tom.exiferaser&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' height='80' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
+# Roll Drop 0.6.0
 
 ### Unity Mobile Hyper Casual Game Project
 
 Mobile hyper casual game based on fast and fun mechanics, designed with Unity and URP.
 
+<a href='https://play.google.com/store/apps/details?id=com.threedkit.RollDrop'><img alt='Get it on Google Play' height='80' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
 ## Key Features
 
 - AdMob Integration
