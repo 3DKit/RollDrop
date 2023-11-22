@@ -1,6 +1,6 @@
 # Roll Drop
 
-### Unity mobile hyper casual game project...
+### Unity Mobile Hyper Casual Game Project
 
 Mobile hyper casual game based on fast and fun mechanics, designed with Unity and URP.
 
